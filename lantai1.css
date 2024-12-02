@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primary: #ffd700;
+  --secondary: #fff;
+  --text-dark: #333;
+  --shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  background: linear-gradient(-45deg, #ff6b6b, #4ecdc4, #45b7d1, #96e6a1);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  padding: 20px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Kotak Besar untuk Logo dan Fakultas */
+.main-box {
+  width: 200%;
+  max-width: 800px; /* Lebar maksimum */
+  background: var(--secondary);
+  border-radius: 40px;
+  padding: 0px;
+  margin-bottom: 30px; /* Menambahkan jarak ke bawah */
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+/* Kotak untuk Logo dan Fakultas */
+.logo-box {
+  margin-bottom: 1px; /* Menambahkan jarak antara logo dan nama fakultas */
+}
+
+.uin-logo {
+  width: 80px; /* Ukuran logo */
+  height: 80px;
+  margin-bottom: 1px;
+  transition: transform 0.3s ease;
+}
+
+.uin-logo:hover {
+  transform: scale(1.1);
+}
+
+.faculty-title {
+  color: var(--text-dark);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Kotak Besar untuk Lantai dan Ruangan */
+.floor-box {
+  width: 100%;
+  max-width: 800px; /* Lebar maksimum untuk daftar ruangan */
+  background: var(--secondary);
+  border-radius: 40px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.floor-title {
+  font-size: 1.8rem;
+  color: var(--text-dark);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Grid Layout untuk Ruangan */
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+}
+
+.room-item {
+  background: var(--secondary);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.room-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .main-box {
+    max-width: 350px; /* Lebar maksimum di tablet lebih kecil */
+  }
+
+  .uin-logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .faculty-title {
+    font-size: 1.25rem;
+  }
+
+  .floor-title {
+    font-size: 1.5rem;
+  }
+
+  .room-item {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .uin-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .faculty-title {
+    font-size: 1rem;
+  }
+
+  .floor-title {
+    font-size: 1.4rem;
+  }
+
+  .room-item {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+      .logout-btn {
+        display: block;
+        width: 150px;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #ff4d4d;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: none;
+      }
+
+      .logout-btn:hover {
+        background-color: #cc0000;
+      }
+   

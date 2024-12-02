@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #FFD700;
+    --secondary: #FFF;
+    --text-dark: #333;
+    --shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.25);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-45deg, #ff6b6b, #4ecdc4, #45b7d1, #96e6a1);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    padding: 20px;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.box {
+    
+    width: 100%;
+    max-width: 400px; /* Kurangi lebar maksimum */
+    background: var(--secondary);
+    border-radius: 40px; /* Perbaiki radius agar lebih halus */
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+}
+
+.logo-box {
+    text-align: center;
+}
+
+.logo-box img {
+    width: 50px; /* Ukuran logo diperkecil */
+    height: 50px; /* Ukuran logo diperkecil */
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo-box img:hover {
+    transform: scale(1.1);
+}
+
+.faculty-title {
+    color: var(--text-dark);
+    font-size: 1.2rem; /* Kurangi ukuran teks fakultas */
+    font-weight: 500; /* Sedikit kurangi ketebalan font */
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0px;
+}
+
+.form-box h1 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem; /* Ukuran font label lebih kecil */
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 10px; /* Radius input diperkecil */
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.2);
+}
+
+.remember-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.remember-me input[type="checkbox"] {
+    width: 16px; /* Checkbox lebih kecil */
+    height: 16px;
+    accent-color: var(--primary);
+}
+
+.forgot-password {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 0.9rem; /* Ukuran teks link lebih kecil */
+}
+
+.forgot-password:hover {
+    color: var(--primary);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px; /* Kurangi padding */
+    background: var(--primary);
+    border: none;
+    border-radius: 10px;
+    color: var(--text-dark);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+@media (max-width: 768px) {
+    .box {
+        max-width: 350px; /* Lebar maksimum di tablet lebih kecil */
+    }
+
+    .logo-box img {
+        width: 70px; /* Ukuran logo lebih kecil di tablet */
+        height: 70px;
+    }
+
+    .faculty-title {
+        font-size: 1rem; /* Kurangi ukuran teks fakultas di tablet */
+    }
+
+    .form-box h1 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-box img {
+        width: 60px; /* Ukuran logo lebih kecil di ponsel */
+        height: 60px;
+    }
+
+    .faculty-title {
+        font-size: 0.9rem; /* Kurangi ukuran teks fakultas di ponsel */
+    }
+
+    .form-box h1 {
+        font-size: 1.4rem;
+    }
+}
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main-box {
+    padding: 20px;
+}
+
+.room-item {
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+    text-align: center;
+}

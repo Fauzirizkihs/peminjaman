@@ -1,0 +1,217 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(-45deg, #ff6b6b, #4ecdc4, #45b7d1, #96e6a1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  background-color: yellow; /* Ganti warna latar belakang menjadi putih */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 8px; /* Tambahkan border-radius untuk sudut yang lebih halus */
+}
+
+.header img {
+  width: 50px;
+  height: auto;
+}
+
+.header h1 {
+  font-size: 18px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.header h2 {
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Grid Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(150px, 1fr)
+  ); /* Responsif untuk kolom */
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Grid Items */
+.grid-item {
+  background-color: #ffd700;
+  color: #fff;
+  padding: 10px; /* Tambahkan padding untuk ruang yang lebih baik */
+  text-align: center;
+  border-radius: 5px;
+  width: 100%; /* Pastikan item mengambil lebar penuh */
+}
+
+/* Tabel Verifikasi */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: black;
+}
+
+th,
+td {
+  padding: 12px 8px;
+  text-align: left;
+  border: 2px solid white;
+}
+
+th {
+  font-weight: bold;
+}
+
+td {
+  vertical-align: middle;
+}
+
+/* Tombol Aksi */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn-approve,
+.btn-reject {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer; /* Tambahkan pointer cursor untuk tombol */
+}
+
+.btn-approve {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-reject {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Responsif untuk Tablet (Layar lebih besar dari 600px) */
+@media (min-width: 600px) {
+  .container {
+    max-width: 700px;
+  }
+
+  .header h1 {
+    font-size: 22px;
+  }
+
+  .header h2 {
+    font-size: 16px;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(200px, 1fr)
+    ); /* Responsif untuk kolom */
+  }
+
+  .grid-item {
+    padding: 15px;
+  }
+
+  table {
+    width: 100%;
+  }
+}
+
+/* Responsif untuk Desktop (Layar lebih besar dari 1024px) */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 900px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .header h2 {
+    font-size: 18px;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(220px, 1fr)
+    ); /* Responsif untuk kolom */
+  }
+
+  .grid-item {
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  table {
+    width: 100%;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: yellow; /* Warna kuning untuk header */
+  padding: 10px 20px;
+  position: relative;
+}
+
+.header img {
+  height: 50px; /* Sesuaikan ukuran gambar logo */
+}
+
+.header-text {
+  flex-grow: 1;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.btn-logout {
+  position: absolute;
+  top: 10px;
+  right: 20px; /* Jarak dari kanan */
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-logout:hover {
+  background-color: #c9302c;
+}
+
+.btn-delete {
+  background-color: #ffc107; /* Warna kuning */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-delete:hover {
+  background-color: #e0a800; /* Warna kuning lebih gelap saat hover */
+}

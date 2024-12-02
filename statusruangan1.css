@@ -1,0 +1,145 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.header {
+    background: #ffffff;
+    color: #34495e;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.status-banner {
+    background: #b2ebf2;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.5em;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.floor {
+    margin: 20px 0;
+}
+
+.room-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.room-row {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.room {
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: yellow; /* Ruangan kosong berwarna biru muda */
+    color: #34495e;
+    position: relative;
+}
+
+.room:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.red {
+    background-color: red; /* Ruangan penuh berwarna merah muda */
+    color: white;
+}
+
+.footer {
+    background: #ffffff;
+    color: #34495e;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Form Styles */
+#form-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-popup div {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+input[type="text"],
+input[type="time"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"],
+button {
+    background-color: #3498db; /* Warna tombol */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #2980b9; /* Warna tombol saat hover */
+}
+
+/* Transisi saat klik ruangan */
+.room:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease; /* Efek saat ruangan diklik */
+}
+
+.room.red {
+    background-color: red;
+    cursor: not-allowed;
+}
+.room.yellow {
+    background-color: yellow;
+    cursor: pointer;
+}
